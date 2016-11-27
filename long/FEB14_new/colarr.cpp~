@@ -1,8 +1,0 @@
-#include<iostream>
-#include<cstdio>
-#include<algorithm>
-#include<cstring>
-
-using namespace std;
-
-int B[1001][1001],C[1001][1001],A[1001];
