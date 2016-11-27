@@ -1,0 +1,29 @@
+#include<iostream>
+#include<cmath>
+
+using namespace std;
+
+pair<int,int> nums(int n){
+  int i,j;
+  i=log2(n);
+  n-=1<<i;
+  j=log2(n);
+  return make_pair(i,j);
+}
+
+int intsize(int k){
+  int s=0,n=k;
+  while(n){
+    if(n&1){
+      s++;
+    }
+    n>>=1;
+  }
+  return s;
+}
+
+int main(){
+  int n;
+  cin>>n;
+  cout<<intsize(n)<<endl;
+}

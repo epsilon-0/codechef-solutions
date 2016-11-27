@@ -1,0 +1,27 @@
+#include<iostream>
+
+using namespace std;
+
+int v[10005];
+
+bool poss(int n);
+
+int main(){
+  int t, n;
+  while(t--){
+    cin >> n;
+    for(int i = 0; i < n; i++){
+      cin >> v[i];
+    }
+    if(poss(n)){
+      cout << "YES\n";
+    }
+    else{
+      cout << "NO\n";
+    }
+  }
+}
+
+bool poss(int n){
+  return true;
+}

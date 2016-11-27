@@ -1,0 +1,26 @@
+#include<iostream>
+#include<cstring>
+#include<algorithm>
+
+using namespace std;
+
+int maxs[1005], a[1005];
+
+int main(){
+  int t,k,n;
+  cin >> t;
+  while(t--){
+    memset(maxs,0,sizeof(maxs));
+    cin >> n >> k;
+    for(int i = 1; i <= n; i++){
+      cin >> a[i];
+    }
+    for(int i = 1; i <= n; i++){
+      maxs[i] = k^a[i];
+      for(int  j = 0; j < i; j++){
+	maxs[i] = max(maxs[j]^a[i], a[i]);
+      }
+    }
+    cout << *max_element(maxs,maxs+n) << endl;
+  }
+}
