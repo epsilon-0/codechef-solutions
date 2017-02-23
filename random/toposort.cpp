@@ -31,7 +31,7 @@ int main(){
       int neigh = adj[next][i];
       indeg[neigh]--;
       if(indeg[neigh] == 0){
-	mheap.push(neigh);
+	      mheap.push(neigh);
       }
     }
   }
